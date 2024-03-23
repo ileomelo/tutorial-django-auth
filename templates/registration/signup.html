@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Cadastre-se{% endblock %}
+
+{% block content %}
+
+<h2>Cadastre-se</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form }}
+  <button type="submit">Cadastrar</button>
+</form>
+
+{% endblock %}

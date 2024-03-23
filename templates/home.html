@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Início{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+<p>Olá, {{ user.username }}!</p>
+<p><a href="{% url 'password_change' %}">Alterar Senha</a></p>
+<form action="{% url 'logout' %}" method="post">
+  {% csrf_token %}
+  <button type="submit">Sair</button>
+</form>
+{% else %}
+<p>Você não está logado</p>
+<p><a href="{% url 'password_reset' %}">Redefinição de Senha</a></p>
+<p><a href="{% url 'login' %}">Entrar</a></p>
+{% endif %}
+{% endblock %}

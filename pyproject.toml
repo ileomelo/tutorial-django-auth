@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "django-auth"
+version = "0.1.0"
+description = "Complete user authentication system in Django, consisting of login, logout, signup, password change and password reset"
+authors = ["Leonardo Melo <leonardo.mel04@outlook.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+django = "^5.0.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
